@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DenTask - Basic Task List</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+
+<body>
+    <div class="overlay">
+        <header>
+            <div class="topbar">
+                <h1 class="logo"><strong>Den</strong>Task</h1>
+                <img class="userImg" id="userImg" src='DenzellProfileImg.jpg'>
+            </div>
+            <h2 class="greeting" id="greeting-text">Hey there, Denzell!👋</h2>
+            <form class="new-task-form" id="new-task-form">
+                <div class="text-options" id="text-options">
+                    <h4>New task: </h4>
+                    <input
+                        type="text"
+                        id="new-task-title"
+                        placeholder="Title"
+                        class="form-input"
+                        style="width: 15%;"
+                        />
+                    <input
+                        type="text"
+                        id="new-task-input"
+                        placeholder="What do you want to do?"
+                        class="form-input"
+                        style="width: 35%; margin-left: 10px;"
+                        />
+                    <input
+                        type="submit"
+                        class="standard-btn"
+                        id="new-task-submit"
+                        value="Add Task"/>
+                </div>
+                <div class='color-options' id="task-color-options">
+                    <h4 class="color-text">Choose color: </h4>
+                    <input class="color-btn"
+                        type="button"
+                        id="button-purple"
+                        value="  "
+                        style="background-color: var(--purple);"
+                    />
+                    <input class="color-btn"
+                        type="button"
+                        id="button-green"
+                        value="  "
+                        style="background-color: var(--green);"
+                    />
+                    <input class="color-btn"
+                        type="button"
+                        id="button-red"
+                        value="  "
+                        style="background-color: var(--red);"
+                    />
+                    <input class="color-btn"
+                        type="button"
+                        id="button-blue"
+                        value="  "
+                        style="background-color: var(--blue);"
+                    />
+                    <input class="color-btn"
+                        type="button"
+                        id="button-orange"
+                        value="  "
+                        style="background-color: var(--orange);"
+                    />
+                </div>
+            </form>
+        </header>
+
+        <main>
+
+        <section class="task-blocks">
+                <h3 style="font-size: 30px; font-weight: 300; padding-bottom: 20px; padding-top: 10px;">Check out your current task list:</h3>
+
+                <div class="tasks" id="tasks">
+                    
+                    
+                    <!-- <div class="task">
+                        <div class="title">
+                            <textarea
+                                type="text"
+                                class="task-title"
+                                readonly
+                            >Practice JavaScript Today</textarea>
+                        </div>
+                        <div class="content">
+                            <textarea
+                                type="text"
+                                class="text"
+                                readonly
+                            >Complete the lesson where we focus on iterables, such as ForEach, Map, Reduce, and Filter.</textarea>
+                        </div>
+                        <div class="actions">
+                            <button class="standard-btn" id="edit">Edit</button>
+                            <button class="standard-btn" id="delete">Delete</button>
+                        </div>
+                    </div> -->
+
+                </div>
+        </section>
+            
+        </main>
+        
+        <script src="main.js"></script>
+</div>
+</body>
+</html>

@@ -1,0 +1,267 @@
+:root {
+    --dark: #120031;
+    --bgpurple: #5A00F2;
+    --grey: #757575;
+    --purple: #5d44ffda;
+    --green: #44FF95da;
+    --red: #E34141da;
+    --blue: #2331F6da;
+    --orange: #FF9341da;
+
+    --pfp: DenzellProfileImg.jpg;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    font-family: 'Metropolis', Helvetica, sans-serif;
+}
+
+html {
+    background-color: var(--dark);
+    scrollbar-width: normal;
+}
+
+html::-webkit-scrollbar {
+    width: 0.5vw;
+}
+
+html::-webkit-scrollbar-thumb {
+    background-color: #eeeeee7e;
+    border-radius: 100px;
+    border: var(--dark);
+}
+
+html::-webkit-scrollbar-track {
+    background-color: transparent;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-image: url(pexels-liza-summer-6348134.jpg);
+    background-size: cover;
+    background-position: right;
+    background-repeat: no-repeat;
+    color: white;
+}
+
+.overlay{
+    min-height: 100vh;
+    background: linear-gradient(to right, #120031ef 70%,#5900f2ce  30%);
+    background-size: 100% 100%;
+}
+header{
+padding-top: 20px;
+margin: 3% 5% 3% 5%;
+
+}
+
+main {
+    margin: 3% 5% 3% 5%;
+}
+
+input, select, textarea{
+    color: #ffffff;
+}
+
+/* Nav Bar */
+
+.topbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 20px;
+    font-weight:lighter;
+    text-transform: uppercase;
+}
+
+.userImg {
+    width: 50px;
+    height: 50px;
+    border-radius: 1000px;
+}
+
+/* Greeting Message*/
+
+.greeting {
+    font-size: 7vw;
+    font-weight: 400;
+    padding-bottom: 10px;
+}
+
+/* New Task Form */
+.text-options {
+    display: flex;
+    align-items: center;
+}
+
+.text-options h4 {
+    font-size: 24px;
+    font-weight: 400;
+    padding-right: 10px;
+}
+
+.form-input {
+    background-color: #0b001D;
+    border-radius: 10px;
+    border-width: 1px;
+    border-style: solid;
+    border-color: var(#383838);
+    font-size: 18px;
+    padding: 10px;
+}
+
+.standard-btn {
+    text-transform: uppercase;
+    background-color: transparent;
+    border-width: 0px;
+    padding: 10px;
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+    cursor: pointer;
+    transition: 0.4s;
+}
+
+.standard-btn:hover {
+    opacity: 0.8;
+}
+
+.standard-btn:active {
+    opacity: 0.6;
+}
+
+/* Color Options Pallete */
+
+.color-options{
+    padding-top: 10px;
+    padding-bottom: 15px;
+    margin-left: 10%;
+    display: flex;
+    align-items: center;
+    border-radius: 40px;
+}
+
+.color-options .color-text{
+    font-size: 18px;
+    font-weight: 400;
+    padding-right: 5px;
+}
+
+.color-options .color-btn{
+    border-radius: 12px;
+    margin-left: 5px;
+    font-size: 28px;
+    border-style: none;
+    cursor: pointer;
+}
+
+/* Task Blocks*/
+
+.main {
+    min-height: 100vh;
+}
+
+.tasks{
+    display: grid;
+    /* grid-template-columns: auto auto auto; */
+    grid-template-columns: repeat(3, 1fr);
+    padding: 10px;
+    gap: 20px;
+    
+}
+
+.task {
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: var(--purple);
+    width: 40vw /3;
+    /* height: 50vh; */
+    border-radius: 50px;
+    /* max-height: 400px; */
+    margin-right: 20px;
+    margin-bottom: 25px;
+    backdrop-filter: blur(10px);
+    backdrop-filter: brightness(1000%);
+}
+
+
+.task .title {
+    background-color: transparent;
+    border-radius: 60px 60px 0px 0px;
+    border-style: none;
+    padding: 30px 20px 0px 30px;
+    font-size: 2.3vw;
+    font-weight: 600;
+    word-wrap:break-word;
+    width: max-content;
+    resize: none;
+}
+
+.task .title::-webkit-scrollbar {
+    margin-top: 30px;
+    width: 0.5vw;
+}
+
+.task textarea::-webkit-scrollbar-thumb {
+    background-color: #eeeeee7e;
+    border-radius: 100px;
+    border: var(--dark);
+}
+
+.task textarea::-webkit-scrollbar-track {
+    background-color: transparent;
+}
+
+task .title :focus {
+    outline: none;
+}
+
+text {
+    background-color: transparent;
+    border-style: none;
+    padding: 30px 20px 0px 30px;
+    font-size: 2.3vw;
+    font-weight: 600;
+    word-wrap:break-word;
+    width: max-content;
+    resize: none;
+}
+
+
+
+.task .content {
+    background-color: transparent;
+    border-style: none;
+    padding: 10px 20px 10px 30px;
+    font-size:calc(75% + 1vw);
+    width: 100%;
+    resize: none;
+    overflow: auto;
+    height: 200px;
+    overflow-wrap: break-word;
+    margin-right: -20px;
+    scrollbar-width: thin;
+}
+
+.task .content::-webkit-scrollbar {
+    margin-top: 30px;
+    width: 0.5vw;
+}
+
+
+.task .actions {
+    margin-top: auto;
+    background-color: transparent;
+    padding-left: 30px;
+    padding-bottom: 15px;
+    padding-top: 15px;
+    border-radius: 0 0px 40px 40px;
+    backdrop-filter: blur(10px);
+    backdrop-filter: brightness(120%);
+}
